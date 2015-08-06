@@ -4,11 +4,12 @@ an daemon app that will log all keystrokes while running e.g. (running `python k
 ## Specifications brainstorm
 
 - runs in the background (daemon process)
-- format of keystroke logging : 
+- format of keystroke logging :
 each stroke has its own line of the form
 `<timestamp> <key>`
 though not sure how difficult that will be
 - automatically begins running when the computer is awake
+- keep track of keystrokes separately for different applications (maybe include pid in each log line?)
 
 ## Potential uses
 
@@ -16,4 +17,4 @@ though not sure how difficult that will be
 - what is the distribution of keystrokes?
 - can the next keystroke be predicted based on the past 'N'?
 - what can we infer about the users behavior just from this data? (i.e. are they coding? Writing a letter?...)
-
+- analysis of consecutive keystroke distance to see if another keyboard layout would be more efficient
